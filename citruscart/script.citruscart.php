@@ -34,6 +34,7 @@ class Com_CitruscartInstallerScript{
 		$prefix = $db->getPrefix();
 
 		//address
+<<<<<<< HEAD
 
 		if(!in_array($prefix.'citruscart_wishlistitems', $tables)){
 
@@ -43,6 +44,17 @@ class Com_CitruscartInstallerScript{
 					`user_id` int(11) NOT NULL,
 					`wishlist_name` varchar(255) NOT NULL,
 					`privacy` int(11) NOT NULL DEFAULT '1' COMMENT 'public = 1, linkonly = 2, private  = 3',
+=======
+
+		if(!in_array($prefix.'citruscart_wishlistitems', $tables)){
+
+			$query = "CREATE TABLE IF NOT EXISTS `#__citruscart_wishlistitems` (
+  `wishlistitem_id` int(11) NOT NULL AUTO_INCREMENT,
+  `wishlist_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `wishlist_name` varchar(255) NOT NULL,
+  `privacy` int(11) NOT NULL DEFAULT '1' COMMENT 'public = 1, linkonly = 2, private  = 3',
+>>>>>>> pr/5
   `session_id` varchar(255) NOT NULL,
   `product_id` int(11) NOT NULL,
   `vendor_id` int(11) NOT NULL,
@@ -50,7 +62,11 @@ class Com_CitruscartInstallerScript{
   `last_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `wishlistitem_params` text COMMENT 'Params for the wishlist item',
   PRIMARY KEY (`wishlistitem_id`)
+<<<<<<< HEAD
 			) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+=======
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+>>>>>>> pr/5
 			";
 			$this->_executeQuery($query);
 		}
