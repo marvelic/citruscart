@@ -13,7 +13,7 @@
 defined('_JEXEC') or die('Restricted access');
 
 if ( !class_exists('Citruscart') )
-    JLoader::register( "Citruscart", JPATH_ADMINISTRATOR."/components/com_citruscart/defines.php" );
+    JLoader::register( "Citruscart", JPATH_ADMINISTRATOR.DS."components".DS."com_citruscart".DS."defines.php" );
 
 Citruscart::load( "CitruscartHelperRoute", 'helpers.route' );
 
