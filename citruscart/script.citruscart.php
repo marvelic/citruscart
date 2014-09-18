@@ -75,7 +75,7 @@ class Com_CitruscartInstallerScript{
         $status->plugins = array();
         $src = $parent->getParent()->getPath('source');
 		$manifest = $parent->getParent()->manifest;
-		$modules = $manifest->xpath('modules'.DS.'module');
+		$modules = $manifest->xpath('modules/module');
 		foreach ($modules as $module)
 		{
 			$name = (string)$module->attributes()->module;
@@ -91,7 +91,7 @@ class Com_CitruscartInstallerScript{
 			$status->modules[] = array('name' => $name, 'client' => $client, 'result' => $result);
 		}
 
-		$plugins = $manifest->xpath('plugins'.DS.'plugin');
+		$plugins = $manifest->xpath('plugins/plugin');
 		foreach ($plugins as $plugin)
 		{
 			$name = (string)$plugin->attributes()->plugin;
@@ -130,7 +130,7 @@ class Com_CitruscartInstallerScript{
 		$status->modules = array();
 		$status->plugins = array();
 		$manifest = $parent->getParent()->manifest;
-		$plugins = $manifest->xpath('plugins'.DS.'plugin');
+		$plugins = $manifest->xpath('plugins/plugin');
 		foreach ($plugins as $plugin)
 		{
 			$name = (string)$plugin->attributes()->plugin;
@@ -149,7 +149,7 @@ class Com_CitruscartInstallerScript{
 			}
 
 		}
-		$modules = $manifest->xpath('modules'.DS.'module');
+		$modules = $manifest->xpath('modules/module');
 		foreach ($modules as $module)
 		{
 			$name = (string)$module->attributes()->module;
@@ -237,7 +237,7 @@ class CitruscartInstaller extends JObject
                 // Joomla! 1.5 code here
                 $tmp_dest 	= $config->getValue('config.tmp_path');
             }
-            $package['packagefile'] = $tmp_dest . DS . $package['packagefile'];
+            $package['packagefile'] = $tmp_dest . '/' . $package['packagefile'];
         }
 
         JInstallerHelper::cleanupInstall($package['packagefile'], $package['extractdir']);
