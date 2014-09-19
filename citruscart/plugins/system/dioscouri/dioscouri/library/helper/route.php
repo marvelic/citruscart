@@ -11,7 +11,7 @@
 -------------------------------------------------------------------------*/
 /** ensure this file is being included by a parent file */
 defined('_JEXEC') or die('Restricted access');
-require_once(JPATH_SITE .'/libraries/dioscouri/library/helper.php');
+require_once(JPATH_SITE .DS.'libraries'.DS.'dioscouri'.DS.'library'.DS.'helper.php');
 class DSCHelperRoute extends DSCHelper
 {
     static $itemids = null;

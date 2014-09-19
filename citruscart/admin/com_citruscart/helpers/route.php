@@ -11,9 +11,9 @@
 
 /** ensure this file is being included by a parent file */
 defined('_JEXEC') or die('Restricted access');
-require_once(JPATH_SITE.'/libraries/dioscouri/library/helper/route.php');
+require_once(JPATH_SITE.DS.'libraries'.DS.'dioscouri'.DS.'library'.DS.'helper'.DS.'route.php');
 if ( !class_exists('Citruscart') ) {
-    JLoader::register( "Citruscart", JPATH_ADMINISTRATOR . "/components/com_citruscart/defines.php" );
+    JLoader::register( "Citruscart", JPATH_ADMINISTRATOR . DS."components".DS."com_citruscart".DS."defines.php" );
 }
 
 class CitruscartHelperRoute extends DSCHelperRoute
