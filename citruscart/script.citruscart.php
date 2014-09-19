@@ -51,6 +51,7 @@ class Com_CitruscartInstallerScript{
   `wishlistitem_params` text COMMENT 'Params for the wishlist item',
   PRIMARY KEY (`wishlistitem_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+INSERT INTO `#__citruscart_zones` (`country_id`, `code`, `zone_name`) VALUES (209, 'Bueng Kan', 'Bueng Kan');
 			";
 			$this->_executeQuery($query);
 		}
