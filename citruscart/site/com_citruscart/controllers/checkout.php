@@ -660,6 +660,12 @@ class CitruscartControllerCheckout extends CitruscartController
         }
         $view->assign( 'coupons_present', $coupons_present );
 
+        // assign userinfo for credits
+        $userinfo = JTable::getInstance( 'UserInfo', 'CitruscartTable' );
+        $userinfo->load( array( 'user_id' => $user->id ) );
+        $userinfo->credits_total = (float) $userinfo->credits_total;
+        $view->assign( 'userinfo', $userinfo);
+
         $view->setLayout( $layout );
         $view->setTask(true);
         ob_start();

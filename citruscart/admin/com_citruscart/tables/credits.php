@@ -177,7 +177,7 @@ class CitruscartTableCredits extends CitruscartTable
         {
             // this record cause a credit change for the user
             // so deduct their value from the users total
-            $userdata = JTable::getInstance( 'Userdata', 'CitruscartTable' );
+            $userdata = JTable::getInstance( 'Userinfo', 'CitruscartTable' );
             $userdata->load( array( 'user_id' => $this->user_id ) );
             $userdata->user_id = $this->user_id;
             $userdata->credits_total = $userdata->credits_total - $this->credit_amount;
