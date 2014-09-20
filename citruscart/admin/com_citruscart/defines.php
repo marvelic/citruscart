@@ -14,8 +14,11 @@
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
+if(!defined('DS')) {
+	define('DS', DIRECTORY_SEPARATOR);
+}
 
-require_once (JPATH_SITE.'/libraries/dioscouri/dioscouri.php');
+require_once (JPATH_SITE.DS.'libraries'.DS.'dioscouri'.DS.'dioscouri.php');
 
 class Citruscart extends DSC
 {
@@ -288,49 +291,49 @@ class Citruscart extends DSC
 		switch($type)
 		{
 			case 'media' :
-				$url = JURI::root(true).'/media/citruscart/';
+				$url = JURI::root(true).DS.'media'.DS.'citruscart'.DS;
 				break;
 			case 'css' :
-				$url = JURI::root(true).'/media/citruscart/css/';
+				$url = JURI::root(true).DS.'media'.DS.'citruscart/css'.DS;
 				break;
 			case 'images' :
-				$url = JURI::root(true).'/media/citruscart/images/';
+				$url = JURI::root(true).DS.'media'.DS.'citruscart'.DS.'images'.DS;
 				break;
 			case 'ratings' :
-				$url = JURI::root(true).'/media/citruscart/images/ratings/';
+				$url = JURI::root(true).DS.'media'.DS.'citruscart'.DS.'images'.DS.'ratings'.DS;
 				break;
 			case 'js' :
-				$url = JURI::root(true).'/media/citruscart/js/';
+				$url = JURI::root(true).DS.'media'.DS.'citruscart'.DS.'js'.DS;
 				break;
 			case 'categories_images' :
-				$url = JURI::root(true).'/images/citruscart/categories/';
+				$url = JURI::root(true).DS.'images'.DS.'citruscart'.DS.'categories'.DS;
 				break;
 			case 'categories_thumbs' :
-				$url = JURI::root(true).'/images/citruscart/categories/thumbs/';
+				$url = JURI::root(true).DS.'images'.DS.'citruscart'.DS.'categories'.DS.'thumbs'.DS;
 				break;
 			case 'products_images' :
-				$url = JURI::root(true).'/images/citruscart/products/';
+				$url = JURI::root(true).DS.'images'.DS.'citruscart'.DS.'products'.DS;
 				break;
 			case 'products_thumbs' :
-				$url = JURI::root(true).'/images/citruscart/products/thumbs/';
+				$url = JURI::root(true).DS.'images'.DS.'citruscart'.DS.'products'.DS.'thumbs'.DS;
 				break;
 			case 'products_files' :
-				$url = JURI::root(true).'/images/citruscart/files/';
+				$url = JURI::root(true).DS.'images'.DS.'citruscart'.DS.'files'.DS;
 				break;
 			case 'order_files' :
-				$url = JURI::root(true).'/images/citruscart/orders/';
+				$url = JURI::root(true).DS.'images'.DS.'citruscart'.DS.'orders'.DS;
 				break;
 			case 'manufacturers_images' :
-				$url = JURI::root(true).'/images/citruscart/manufacturers/';
+				$url = JURI::root(true).DS.'images'.DS.'citruscart'.DS.'manufacturers'.DS;
 				break;
 			case 'manufacturers_thumbs' :
-				$url = JURI::root(true).'/images/citruscart/manufacturers/thumbs/';
+				$url = JURI::root(true).DS.'images'.DS.'citruscart'.DS.'manufacturers'.DS.'thumbs'.DS;
 				break;
 			case 'cartitems_files':
-				$url = JURI::root(true).'/images/citruscart/cartitems/';
+				$url = JURI::root(true).DS.'images'.DS.'citruscart'.DS.'cartitems'.DS;
 				break;
 			case 'orderitems_files':
-				$url = JURI::root(true).'/images/citruscart/orderitems/';
+				$url = JURI::root(true).DS.'images'.DS.'citruscart'.DS.'orderitems'.DS;
 				break;
 		}
 
@@ -384,58 +387,58 @@ class Citruscart extends DSC
 		switch($type)
 		{
 			case 'media' :
-				$path = JPATH_SITE.'/media/citruscart';
+				$path = JPATH_SITE.DS.'media'.DS.'citruscart';
 				break;
 			case 'css' :
-				$path = JPATH_SITE.'/media/citruscart/css';
+				$path = JPATH_SITE.DS.'media'.DS.'citruscart'.DS.'css';
 				break;
 			case 'images' :
-				$path = JPATH_SITE.'/media/citruscart/images';
+				$path = JPATH_SITE.DS.'media'.DS.'citruscart'.DS.'images';
 				break;
 			case 'ratings' :
-				$path = JPATH_SITE.'/media/citruscart/images/ratings';
+				$path = JPATH_SITE.DS.'media'.DS.'citruscart'.DS.'images'.DS.'ratings';
 				break;
 			case 'js' :
-				$path = JPATH_SITE.'/media/citruscart/js';
+				$path = JPATH_SITE.DS.'media'.DS.'citruscart'.DS.'js';
 				break;
 			case 'products_templates' :
-				$path = JPATH_SITE.'/media/citruscart/templates/site/products';
+				$path = JPATH_SITE.DS.'media'.DS.'citruscart'.DS.'templates'.DS.'site'.DS.'products';
 				break;
             case 'product_buy_templates' :
-                $path = JPATH_SITE.'/media/citruscart/templates/site/product_buy';
+                $path = JPATH_SITE.DS.'media'.DS.'citruscart'.DS.'templates'.DS.'site'.DS.'product_buy';
                 break;
 			case 'categories_templates' :
-				$path = JPATH_SITE.'/media/citruscart/templates/site/categories';
+				$path = JPATH_SITE.DS.'media'.DS.'citruscart'.DS.'templates'.DS.'site'.DS.'categories';
 				break;
 			case 'categories_images' :
-				$path = JPATH_SITE.'/images/citruscart/categories';
+				$path = JPATH_SITE.DS.'images'.DS.'citruscart'.DS.'categories';
 				break;
 			case 'categories_thumbs' :
-				$path = JPATH_SITE.'/images/citruscart/categories/thumbs';
+				$path = JPATH_SITE.DS.'images'.DS.'citruscart'.DS.'categories'.DS.'thumbs';
 				break;
 			case 'products_images' :
-				$path = JPATH_SITE.'/images/citruscart/products';
+				$path = JPATH_SITE.DS.'images'.DS.'citruscart'.DS.'products';
 				break;
 			case 'products_thumbs' :
-				$path = JPATH_SITE.'/images/citruscart/products/thumbs';
+				$path = JPATH_SITE.DS.'images'.DS.'citruscart'.DS.'products'.DS.'thumbs';
 				break;
 			case 'products_files' :
-				$path = JPATH_SITE.'/images/com_citruscart/files';
+				$path = JPATH_SITE.DS.'images'.DS.'com_citruscart'.DS.'files';
 				break;
 			case 'manufacturers_images' :
-				$path = JPATH_SITE.'/images/citruscart/manufacturers';
+				$path = JPATH_SITE.DS.'images'.DS.'citruscart'.DS.'manufacturers';
 				break;
 			case 'manufacturers_thumbs' :
-				$path = JPATH_SITE.'/images/citruscart/manufacturers/thumbs';
+				$path = JPATH_SITE.DS.'images'.DS.'citruscart'.DS.'manufacturers'.DS.'thumbs';
 				break;
 			case 'order_files' :
-				$path = JPATH_SITE.'/images/citruscart/orders';
+				$path = JPATH_SITE.DS.'images'.DS.'citruscart'.DS.'orders';
 				break;
 			case 'cartitems_files':
-				$path = JPATH_SITE.'/images/citruscart/cartitems';
+				$path = JPATH_SITE.DS.'images'.DS.'citruscart'.DS.'cartitems';
 				break;
 			case 'orderitems_files':
-				$path = JPATH_SITE.'/images/citruscart/orderitems';
+				$path = JPATH_SITE.DS.'images'.DS.'citruscart'.DS.'orderitems';
 				break;
 
 		}

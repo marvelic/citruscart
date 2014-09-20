@@ -447,6 +447,12 @@ CitruscartOpc = CitruscartClass.extend({
             context: this,
             data: form_data
         }).done(function(data){
+			if (data.charAt(0) == ' ') {
+				var data = data.substr(1);
+			}
+			if (data.charAt(0) == '1') {
+				var data = data.substr(1);
+			}
             var response = JSON.decode(data, false);
             if (!response.summary.id) {
                 response.summary.id = this.options.summaryElements.setPayment;
